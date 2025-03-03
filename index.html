@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('expenditure')">Expenditure Details</a>
+        <a href="#" onclick="showSection('income')">Income Details</a>
+        <a href="#" onclick="showSection('family')">Family Members Details</a>
+        <a href="#" onclick="showSection('overview')">Overview</a>
+    </nav>
+
+    <div id="home" class="section">
+        
+        <h2>Welcome to Personal Management</h2>
+    </div>
+
+    <div id="expenditure" class="section hidden">
+        <h2>Expenditure</h2>
+        <input type="text" id="expMonth" placeholder="Month">
+        <input type="text" id="expType" placeholder="Type">
+        <input type="number" id="expAmount" placeholder="Amount">
+        <button onclick="addExpenditure()">Add Expenditure</button>
+        <ul id="expList"></ul>
+    </div>
+
+    <div id="income" class="section hidden">
+        <h2>Income</h2>
+        <input type="text" id="incMonth" placeholder="Month">
+        <input type="text" id="incType" placeholder="Type">
+        <input type="number" id="incAmount" placeholder="Amount">
+        <button onclick="addIncome()">Add Income</button>
+        <ul id="incList"></ul>
+    </div>
+
+    <div id="family" class="section hidden">
+        <h2>Family Members</h2>
+        <input type="text" id="famName" placeholder="Name">
+        <input type="text" id="famOccupation" placeholder="Occupation">
+        <input type="text" id="famStudies" placeholder="Studies">
+        <input type="number" id="famAge" placeholder="Age">
+        <button onclick="addFamily()">Add Family Member</button>
+        <ul id="famList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
